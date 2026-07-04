@@ -1,0 +1,20 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        ORG_NAME: "Himpunan Mahasiswa Sistem Informasi"
+        ORG_TAGLINE: "Bersatu, Berinovasi, Berkontribusi"
+        ORG_MISSION: "Mengembangkan potensi mahasiswa Sistem Informasi melalui kegiatan akademik, riset, dan pengabdian masyarakat berbasis teknologi."
+        ORG_VISION: "Menjadi organisasi mahasiswa teknologi terdepan yang melahirkan pemimpin digital berkualitas di tingkat nasional."
+        ORG_FOUNDED: "2018"
+        ORG_MEMBERS: "120+"
+        ORG_DIVISION: "6"
+        ORG_EMAIL: "hmsi@tazkia.ac.id"
+        ORG_LOCATION: "STMIK Tazkia, Bogor"
+    image: 251552010034-hmsi-soal-1b:latest
+    container_name: soal-1b-web
+    ports:
+      - "8282:80"
+    restart: unless-stopped
